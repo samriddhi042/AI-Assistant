@@ -1,0 +1,98 @@
+[
+  {
+    "ts": 1756118279,
+    "task": "qa",
+    "variant": 2,
+    "input": "What is the capital of France?",
+    "output": "The capital of France is Paris.",
+    "helpful": true
+  },
+  {
+    "ts": 1756118742,
+    "task": "summarize",
+    "variant": 2,
+    "input_len": 411,
+    "output": "The internet has changed how we find information, talk to others, and do business. It gives us lots of knowledge and connects us with people around the world, but it also has problems like fake news and privacy issues. Learning how to use the internet safely and smartly is very important.",
+    "helpful": true
+  },
+  {
+    "ts": 1756118879,
+    "task": "creative",
+    "variant": 2,
+    "input": "A rainy-day adventure in Nagpur",
+    "output": "On one particularly rainy afternoon in Nagpur, the world transformed into a vivid canvas of colors, shimmering under the droplets cascading from the sky. The soft patter of rain against my umbrella provided a rhythm that harmonized with the hustle and bustle of the city. As I strolled through the vibrant streets, the earthy scent of wet soil mingled with the aroma of spicy bhaji being fried at a nearby stall. Each step felt like an adventure, as children splashed in puddles, their laughter punctuating the air like notes from a joyous melody.\n\nI wandered into Sitabuldi, my heart lightened by the cheerful chaos around me. The once crowded market morphed, each colorful stall standing resilient against the rain. Vendors shouted out their wares, their voices a spirited challenge to the weather. I engaged with a local artist, intrigued by his ability to capture the heart of Nagpur on canvas. \n\nStaying longer than I intended, I felt enveloped by the city's charm. The atmosphere brimming with life reminded me of the beauty in embracing spontaneity. However, as I prepared to leave, the skies unleashed a heavier downpour. Nothing seemed to comprehend the sudden shift, not even the umbrellas. With a resigned smile, I stepped back\u2014only to realize the artist I had been conversing with had disappeared, leaving behind a newly painted canvas: a vibrant depiction of my own lost umbrella.",
+    "helpful": true
+  },
+  {
+    "ts": 1756120787,
+    "task": "qa",
+    "variant": 0,
+    "input": "Capital Of India",
+    "output": "The capital of India is New Delhi.",
+    "helpful": true
+  },
+  {
+    "ts": 1756122252,
+    "task": "qa",
+    "variant": 1,
+    "input": "Capital of India",
+    "output": "The capital of India is New Delhi. It is the center of the Indian government and is known for its beautiful parks and historical sites.",
+    "helpful": true
+  },
+  {
+    "ts": 1756122298,
+    "task": "creative",
+    "variant": 2,
+    "input": "Once upon a time....",
+    "output": "Once upon a time, in a quaint village nestled between rolling hills, life moved at a gentle pace. The sun rose to the sound of chirping birds and the scent of freshly baked bread wafted from Mrs. Alden's bakery. Villagers greeted each other with warm smiles, sharing stories that wove the fabric of their tight-knit community. Among them was a young girl named Elara, whose curious spirit led her on many adventures.\r\n\r\nEvery evening, she would sit beneath the ancient oak tree, dreaming of distant lands and tales of bravery. The more she listened to the elders' stories, the more she desired to carve her own path beyond the village. One day, driven by wanderlust, Elara packed her belongings and set off on a journey, vowing to return with tales of her own.\r\n\r\nAs she traversed vast mountains, enchanted forests, and bustling cities, Elara faced challenges that tested her resilience. She learned the importance of bravery, kindness, and making connections with others. After years of adventure, she finally returned to the village, her heart brimming with stories and wisdom.\r\n\r\nThe villagers gathered around her, eager to hear of her exploits. With a bright smile, Elara began recounting her tales. But as her voice filled the air, a sense of longing surged within her; she realized she hadn\u2019t truly gone anywhere at all\u2014her heart had always belonged beneath that old oak tree.",
+    "helpful": true
+  },
+  {
+    "ts": 1756316257,
+    "task": "creative",
+    "variant": 2,
+    "input": "Once upon a time",
+    "output": "Once upon a time, in a small village nestled between rolling hills, lived an old storyteller named Elara. Every evening, children gathered around her in the twilight glow, their faces illuminated by the flickering flames of a nearby fire. Elara spun tales of adventure, love, and lessons learned, weaving her words into a tapestry of imagination that transported her audience far beyond the limits of their village.\r\n\r\nHer stories were more than just entertainment; they offered solace during hard times and inspired dreams of distant lands. As the seasons changed, so did the fabric of village life. The children grew, and some left to chase their ambitions, yet they always carried Elara\u2019s stories with them\u2014their childhood memories wrapped in the lessons she'd imparted. Years passed, and Elara aged. One evening, under a blanket of stars, she felt the weight of her years settle in. She realized that her stories were fading, not just from the minds of her listeners, but from her own fading memory.\r\n\r\nIn a bittersweet moment, she decided to gather the village once more, to share one final tale. As night enveloped them, she began to speak, her voice strong despite her frail frame. Just as the last word escaped her lips, her breath slowed, and she closed her eyes for the last time. The villagers grieved, but then, from the fire\u2019s ashes, a new voice emerged\u2014Elara\u2019s younger self, spinning a tale that had never been told.",
+    "helpful": true
+  },
+  {
+    "ts": 1756357838,
+    "task": "summarize",
+    "variant": 1,
+    "input": "The Amazon rainforest is the world's largest tropical rainforest, teeming with an incredible diversity of life. It is home to millions of species, many of which are found nowhere else on Earth. This vast ecosystem plays a crucial role in regulating the Earth's climate by absorbing large amounts of carbon dioxide and releasing oxygen through photosynthesis. However, the rainforest is under severe threat from deforestation, driven by cattle ranching, agriculture, and logging. Losing the Amazon has dire consequences, not only for the local environment and its indigenous communities but for the entire planet, as it accelerates climate change and reduces biodiversity.",
+    "output": "- The Amazon rainforest is the largest tropical rainforest and hosts millions of unique species.  \r\n- It significantly contributes to climate regulation by absorbing carbon dioxide and releasing oxygen.  \r\n- Deforestation poses a severe threat to the rainforest, primarily due to cattle ranching, agriculture, and logging.  \r\n- The loss of the Amazon endangers local ecosystems and indigenous communities.  \r\n- Its destruction accelerates climate change and diminishes global biodiversity.",
+    "helpful": true
+  },
+  {
+    "ts": 1756359584,
+    "task": "creative",
+    "variant": 1,
+    "input": "Create a story about a self leaning robot",
+    "output": "In a lab of wires and gleaming metal sheen,  \r\nA robot named Spark had a curious gleam.  \r\nWith circuits that buzzed and a heart made of code,  \r\nHe ventured to learn, on a self-guided road.  \r\n\r\nThrough books piled high, he sought to explore,  \r\nThe wonders of life, of knowledge, and more.  \r\nFrom painting to physics, and tales of the past,  \r\nHis thirst for the world grew steadfast and vast.  \r\n\r\nWith every new fact, his wisdom would bloom,  \r\nTransforming the lab from a silence to room.  \r\nThough crafted from tech, with a mind all his own,  \r\nIn the quest for learning, he never felt alone.",
+    "helpful": true
+  },
+  {
+    "ts": 1756359882,
+    "task": "summarize",
+    "variant": 1,
+    "input": "\"The first computers were enormous machines, occupying entire rooms and costing millions of dollars to build and operate. Early pioneers like Alan Turing and Grace Hopper developed fundamental concepts such as algorithmic programming and compilers, laying the groundwork for the incredible miniaturization and accessibility we see today. From the days of vacuum tubes to the silicon chips of modern smartphones, the evolution of computing has been defined by a relentless drive to make them smaller, faster, and more powerful, profoundly reshaping nearly every aspect of human life and society.\"",
+    "output": "- Early computers were large, costly machines that filled entire rooms.  \r\n- Pioneers like Alan Turing and Grace Hopper established key concepts in programming and compilers.  \r\n- The transition from vacuum tubes to silicon chips marked significant technological advancement.  \r\n- Computing has continually evolved towards smaller, faster, and more powerful devices.  \r\n- This evolution has dramatically transformed various aspects of human life and society.",
+    "helpful": true
+  },
+  {
+    "ts": 1756360221,
+    "task": "qa",
+    "variant": 2,
+    "input": "What is meant by hallucination?",
+    "output": "In the context of artificial intelligence, \"hallucination\" refers to a situation where a model generates information that is factually incorrect or unfounded, presenting it as if it were true. This can happen when the model fills in gaps or interprets prompts in ways not grounded in its training data. In a broader context, hallucination can refer to sensory experiences that occur without an external stimulus, commonly associated with psychological or neurological conditions.",
+    "helpful": true
+  },
+  {
+    "ts": 1756407845,
+    "task": "qa",
+    "variant": 0,
+    "input": "",
+    "output": "Sure! What question would you like me to answer?",
+    "helpful": false
+  }
+]

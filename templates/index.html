@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Assistant Web App</title>
+  <style>
+    :root {
+      /* Light theme */
+      --bg-light: linear-gradient(135deg, #FBE4D8, #DFB6B2);
+      --card-light: rgba(82, 43, 91, 0.2);
+      --text-light: #2B124C;
+      --heading-light: #190019;
+      --btn-light: #854F6C;
+
+      /* Dark theme */
+      --bg-dark: linear-gradient(135deg, #190019, #2B124C, #522B5B);
+      --card-dark: rgba(133, 79, 108, 0.25);
+      --text-dark: #DFB6B2;
+      --heading-dark: #FBE4D8;
+      --btn-dark: #522B5B;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.6s ease-in-out;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.6s ease-in-out;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      transition: color 0.6s ease;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+      transition: color 0.6s ease;
+    }
+
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 12px;
+      border: none;
+      margin-bottom: 1rem;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      padding: 0.8rem 1.8rem;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+    }
+
+    .output-box {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: left;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .feedback button {
+      margin: 0.5rem;
+    }
+
+    /* Light theme */
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body.light .container {
+      background: var(--card-light);
+    }
+
+    body.light h2 {
+      color: var(--heading-light);
+    }
+
+    body.light .output-box {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    body.light button {
+      background: var(--btn-light);
+      color: #FBE4D8;
+    }
+
+    /* Dark theme */
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark .container {
+      background: var(--card-dark);
+    }
+
+    body.dark h2 {
+      color: var(--heading-dark);
+    }
+
+    body.dark .output-box {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    body.dark button {
+      background: var(--btn-dark);
+      color: var(--text-dark);
+    }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: rotate(20deg);
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <div class="container">
+    <h2>🤖 AI Assistant</h2>
+
+    <!-- Form -->
+    <form method="POST" action="/">
+      <label>Mode</label>
+      <select name="mode">
+        <option value="qa" {% if mode=="qa" %}selected{% endif %}>❓ Answer Questions</option>
+        <option value="summarize" {% if mode=="summarize" %}selected{% endif %}>📝 Summarize</option>
+        <option value="creative" {% if mode=="creative" %}selected{% endif %}>🎨 Creative</option>
+      </select>
+
+      <label>Variant</label>
+      <select name="variant">
+        <option value="0" {% if variant==0 %}selected{% endif %}>0</option>
+        <option value="1" {% if variant==1 %}selected{% endif %}>1</option>
+        <option value="2" {% if variant==2 %}selected{% endif %}>2</option>
+      </select>
+
+      <label>Your Input</label>
+      <textarea name="input_text" rows="4" placeholder="Type your text here...">{{ input_text }}</textarea>
+
+      <button type="submit">🚀 Submit</button>
+    </form>
+
+    <!-- Output -->
+    {% if output %}
+    <div class="mt-4">
+      <h4>✨ Response:</h4>
+      <div class="output-box">{{ output }}</div>
+    </div>
+
+    <!-- Feedback -->
+    <div class="feedback mt-3">
+      <form method="POST" action="/feedback">
+        <input type="hidden" name="mode" value="{{ mode }}">
+        <input type="hidden" name="variant" value="{{ variant }}">
+        <input type="hidden" name="input_text" value="{{ input_text }}">
+        <input type="hidden" name="output_text" value="{{ output }}">
+        <button type="submit" name="helpful" value="yes">👍 Yes</button>
+        <button type="submit" name="helpful" value="no">👎 No</button>
+      </form>
+    </div>
+    {% endif %}
+  </div>
+
+  <script>
+    // Apply saved theme on load
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.body.classList.add(savedTheme);
+      document.querySelector(".theme-toggle").textContent =
+        savedTheme === "dark" ? "🌞" : "🌙";
+    });
+
+    function toggleTheme() {
+      if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+        localStorage.setItem("theme", "light");
+        document.querySelector(".theme-toggle").textContent = "🌙";
+      } else {
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        document.querySelector(".theme-toggle").textContent = "🌞";
+      }
+    }
+  </script>
+</body>
+
+</html>
